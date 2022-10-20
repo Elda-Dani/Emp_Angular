@@ -8,10 +8,18 @@ import { AddemployeesComponent } from './addemployees/addemployees.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewallComponent } from './viewall/viewall.component';
+import { SearchComponent } from './search/search.component';
 
 const appRoutes:Routes=[
   {
     path:"",component:AddemployeesComponent
+  },
+  {
+    path:"view",component:ViewallComponent
+  },
+  {
+    path:"search",component:SearchComponent
   }
 ]
 
@@ -19,7 +27,9 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddemployeesComponent
+    AddemployeesComponent,
+    ViewallComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

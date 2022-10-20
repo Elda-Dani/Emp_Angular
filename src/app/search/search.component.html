@@ -1,60 +1,71 @@
 <app-navbar></app-navbar>
 
-
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-<h1 style="text-align: center;">Add Employees</h1>
 
 <div class="row g-4">
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+<label for="" class="form-label">Name</label>
+<input type="text" class="form-control" name="name" [(ngModel)]="name">
+
+    </div>
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <button class="btn btn-primary" (click)="readValues()">Search</button>
+    </div>
+
+
+
+<div *ngFor="let i of data">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <label for="" class="form-label">Employee Code</label>
-        <input type="text" class="form-control" name="empcode" [(ngModel)]="empcode">
+        <input type="text" class="form-control" value="{{i.empcode}}">
     </div>
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <label for="" class="form-label">Name</label>
-<input type="text" class="form-control" name="name" [(ngModel)]="name">
+<input type="text" class="form-control" value="{{i.name}}">
 
     </div>
    
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <label for="" class="form-label">Designation</label>
-        <input type="text" class="form-control" name="designation" [(ngModel)]="designation">
+        <input type="text" class="form-control" value="{{i.designation}}">
     </div>
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <label for="" class="form-label">Salary</label>
-        <input type="text" class="form-control" name="salary" [(ngModel)]="salary">
+        <input type="text" class="form-control" value="{{i.salary}}">
 </div>
 
 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
     <label for="" class="form-label">DOB</label>
-<input type="date" name="dob" [(ngModel)]="dob" id="" class="form-control">
+<input type="date" value="{{i.dob}}" id="" class="form-control">
     </div> 
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <label for="" class="form-label">Phone</label>
-        <input type="text" class="form-control" name="phone" [(ngModel)]="phone">
+        <input type="text" class="form-control" value="{{i.phone}}" >
     </div>
 
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <label for="" class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" [(ngModel)]="email">
+        <input type="email" class="form-control" value="{{i.email}}">
     </div>
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <label for="" class="form-label">Company</label>
-        <input type="text" class="form-control" name="company" [(ngModel)]="company">
+        <input type="text" class="form-control" value="{{i.company}}">
     </div>
 
     <div class="col col-12 col-sm-12 col-md-12 col-12 col-lg-12 col-xl-12 col-xxl-12">
         <label for="" class="form-label">Date of Joining</label>
-        <input type="date" name="doj" [(ngModel)]="doj" id="" class="form-control">
+        <input type="date" value="{{i.doj}}" id="" class="form-control">
     </div>
 
-    <div class="col col-12 col-sm-12 col-md-12 col-12 col-lg-12 col-xl-12 col-xxl-12">
-<button class="btn btn-primary" (click)="readValue()" [disabled]="status" >Submit</button>
+       
 
-    </div>
+</div>
+    
 </div>
 
         </div>
     </div>
 </div>
+
